@@ -64,7 +64,8 @@
   },
   "dependencies": {
     "ink": "^7.1.1",
-    "react": "^19.2.8"
+    "react": "^19.2.8",
+    "ws": "^8.18.3"
   },
   "devDependencies": {
     "node-pty": "^1.1.0",
