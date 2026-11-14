@@ -54,7 +54,7 @@ dsh-tui --new | head
 环境变量：
   DSH_URL     host 地址，默认 http://127.0.0.1:3080
   DSH_TOKEN   Web 启动 token；未设置时自动读取 ~/.dsh/logs/web.log
-  DSH_PRESET  新建会话的 agent preset，默认 standard（可按需设为 code）
+  DSH_PRESET  新建会话的 agent preset，默认 code；若当前 DSH 未提供则自动回退 standard
 ```
 
 ### TUI 操作

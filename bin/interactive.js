@@ -4,7 +4,7 @@
 import { render } from "ink";
 import React from "react";
 import { DshClient } from "../lib/client.js";
-import { Session } from "../lib/session.js";
+import { Session, PTC_PRESET } from "../lib/session.js";
 import { LiveConversation } from "../lib/live.js";
 import App from "../ui/components.js";
 import { routeSlash } from "../lib/commands.js";
@@ -66,7 +66,7 @@ export async function startInteractive({ baseUrl, sessionId, preset, cwd, mode =
 				process.exit(0);
 				break;
 			case "new": {
-				const next = await Session.create(client, { cwd: session.cwd, agentPreset: session.agentPreset ?? "code" });
+				const next = await Session.create(client, { cwd: session.cwd, agentPreset: session.agentPreset ?? PTC_PRESET });
 				session = next;
 				writeRecent(session.sessionId, { cwd: session.cwd, agentPreset: session.agentPreset });
 				await conv.switchSession(next);
